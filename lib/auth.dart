@@ -12,8 +12,7 @@ class UserSignin {
           await FirebaseAuth.instance.signInAnonymously();
       // in new update of firebase you need to add usercredential at place of AuthResult
       // now you can directly return userCredential
-      print(userCredential.user); // to print in console
-
+      print(userCredential.user);
       return userCredential;
       // in any exception error lets do all its work in try catch block}
     } catch (e) {

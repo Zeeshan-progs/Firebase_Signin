@@ -11,11 +11,11 @@ Future<void> main() async {
 }
 
 // hello gang welcome to code with nix next tutorial
-// today we are learning about ananomous sign in Firebase
+// today we are learning about anonymous sign in Firebase
 
 // lets jump to browser
-// checking for firebase authencation
-// after that lets create some minimul ui
+// checking for firebase authentication
+// after that lets create some minimal ui
 
 // create stateful widget
 class MyApp extends StatelessWidget {
@@ -48,8 +48,8 @@ class _SignState extends State<Sign> {
           Center(
             child: RaisedButton(
               onPressed: () async {
-                // method of sign in
-               UserCredential result = await UserSignin().signInAnon();
+                // method of sign injhakhd sdkjhshdjfgfhkdjj fjasjjf jhjfhdjhf
+                UserCredential result = await UserSignin().signInAnon();
                 // and after sign in if you want to go to next page
                 if (result == null) {
                   print('error Signin');
@@ -61,7 +61,8 @@ class _SignState extends State<Sign> {
                             builder: (context) => SecondScreen()));
                   });
                 }
-              }, // lets create some firebase work and call it in home
+              },
+               // lets create some firebase work and call it in home
 
               child: Text('Click to Signin Anon'),
             ),
@@ -100,19 +101,14 @@ class _SecondScreenState extends State<SecondScreen> {
   }
 }
 
-
-
-
 // there is some exceptions occurs we will talk about it latter
 
-
 // for now if you loved this video
-// hit like 
+// hit like
 // SHARE
 //Subscribe
 // to Code with nix
 
-
 // jai hind
 
-// thank you all 
+// thank you all
