@@ -49,7 +49,7 @@ class _SignState extends State<Sign> {
             child: RaisedButton(
               onPressed: () async {
                 // method of sign injhakhd sdkjhshdjfgfhkdjj fjasjjf jhjfhdjhf
-                UserCredential result = await UserSignin().signInAnon();
+                dynamic result = await UserSignin().signInAnon();
                 // and after sign in if you want to go to next page
                 if (result == null) {
                   print('error Signin');
@@ -62,7 +62,7 @@ class _SignState extends State<Sign> {
                   });
                 }
               },
-               // lets create some firebase work and call it in home
+              // lets create some firebase work and call it in home
 
               child: Text('Click to Signin Anon'),
             ),
@@ -82,20 +82,25 @@ class _SecondScreenState extends State<SecondScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Column(
-        children: [
-          Text('Second Area'),
-          RaisedButton(
-            onPressed: () async {
-              UserSignin().signOutAnon();
-              setState(() {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Sign()));
-              });
-            },
-            child: Text('sign out'),
-          ),
-        ],
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('screen'),
+        ),
+        body: ListView(
+          children: [
+            Text('Second Area'),
+            RaisedButton(
+              onPressed: () async {
+                UserSignin().signOutAnon();
+                
+                setState(() {
+                  Navigator.pop(context);
+                });
+              },
+              child: Text('sign out'),
+            ),
+          ],
+        ),
       ),
     );
   }
